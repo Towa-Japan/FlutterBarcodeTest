@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.co.towa_gifu.flutter_barcode_test">
+   <uses-permission android:name="android.permission.CAMERA"/>
    <application
-        android:label="flutter_barcode_test"
+        android:label="バーコードテスト"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fast_barcode_scanner/fast_barcode_scanner.dart';
 
-class FastBarcodeScannerScreen extends StatelessWidget {
-  const FastBarcodeScannerScreen();
+class FastBarcodeScannerPage extends StatelessWidget {
+  const FastBarcodeScannerPage();
 
   @override
   Widget build(BuildContext context) {

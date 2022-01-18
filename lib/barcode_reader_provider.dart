@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'barcode_readers/bluetooth_barcode_scanner_page.dart';
-import 'barcode_readers/fast_barcode_scanner_screen.dart';
+import 'barcode_readers/fast_barcode_scanner_page.dart';
 import 'barcode_readers/flutter_barcode_scanner.dart';
 import 'barcode_readers/flutter_qr_bar_scanner_page.dart';
 
@@ -21,7 +21,7 @@ class BarcodeReaderProvider {
   Future<String?> _readWithFastBarcode(BuildContext context) async {
     return Navigator.of(context)
         .push<String?>(MaterialPageRoute(builder: (context) {
-      return const FastBarcodeScannerScreen();
+      return const FastBarcodeScannerPage();
     }));
   }
 

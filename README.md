@@ -2,7 +2,7 @@
 
 A project to compare read times of different barcode packages in flutter.
 
-#　Barcode Reader Packages
+# Barcode Reader Packages
 
 - [flutter_barcode_scanner](https://pub.dev/packages/flutter_barcode_scanner) MIT
 - [fast_barcode_scanner](https://pub.dev/packages/fast_barcode_scanner) MIT

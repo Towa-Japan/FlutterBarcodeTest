@@ -93,9 +93,11 @@ packages:
   flutter_qr_bar_scanner:
     dependency: "direct dev"
     description:
-      name: flutter_qr_bar_scanner
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: patched
+      resolved-ref: "14d5e88a406cc4abbe9244a1103bc78f478b779c"
+      url: "git://github.com/Towa-Japan/flutter_qr_bar_scanner.git"
+    source: git
     version: "3.0.2"
   flutter_test:
     dependency: "direct dev"

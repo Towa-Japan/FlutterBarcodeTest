@@ -22,7 +22,37 @@ class _BarcodeReaderListPageState extends State<BarcodeReaderListPage> {
   }
 
   Widget _buildBarcodeContents(BuildContext context) {
-    return Text(_barcodeText ?? '');
+    return Padding(
+        padding: EdgeInsets.symmetric(vertical: 5),
+        child: (_barcodeText == null)
+            ? Text('')
+            : _buildNonEmptyBarcodeContents(context, 20));
+  }
+
+  Widget _buildNonEmptyBarcodeContents(BuildContext context, int charWidth) {
+    final children = _barcodeText!.characters
+        .map((ch) => Container(
+            width: 20,
+            height: 20,
+            decoration: BoxDecoration(
+                border: Border.all(
+              color: Colors.redAccent,
+              width: 1,
+            )),
+            child: Center(child: Text(ch))))
+        .toList(growable: false);
+    return (_barcodeText!.runes.length < charWidth)
+        ? Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: children,
+          )
+        : Padding(
+            padding: EdgeInsets.symmetric(horizontal: 5),
+            child: GridView.count(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                crossAxisCount: charWidth,
+                children: children));
   }
 
   Widget _buildElapsedContents(BuildContext context) {

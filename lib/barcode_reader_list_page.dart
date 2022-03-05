@@ -31,15 +31,17 @@ class _BarcodeReaderListPageState extends State<BarcodeReaderListPage> {
 
   Widget _buildNonEmptyBarcodeContents(BuildContext context, int charWidth) {
     final children = _barcodeText!.characters
-        .map((ch) => Container(
-            width: 20,
-            height: 20,
-            decoration: BoxDecoration(
-                border: Border.all(
-              color: Colors.redAccent,
-              width: 1,
-            )),
-            child: Center(child: Text(ch))))
+        .map((ch) => Tooltip(
+            message: '0x${ch.codeUnits.first.toRadixString(16)}',
+            child: Container(
+                width: 20,
+                height: 20,
+                decoration: BoxDecoration(
+                    border: Border.all(
+                  color: Colors.redAccent,
+                  width: 1,
+                )),
+                child: Center(child: Text(ch)))))
         .toList(growable: false);
     return (_barcodeText!.runes.length < charWidth)
         ? Row(

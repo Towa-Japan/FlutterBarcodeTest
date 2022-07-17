@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_qr_bar_scanner/flutter_qr_bar_scanner.dart';
 import 'package:flutter_qr_bar_scanner/qr_bar_scanner_camera.dart';
+import 'package:flutter_qr_bar_scanner/scan_result.dart';
 
 class FlutterQrBarScannerPage extends StatefulWidget {
   const FlutterQrBarScannerPage();
@@ -18,10 +19,10 @@ class _FlutterQrBarScannerPageState extends State<FlutterQrBarScannerPage> {
     setState(() => _barcodeRead = false);
   }
 
-  void _scanCode(String? code) {
+  void _scanCode(ScanResult rslt) {
     if (!_barcodeRead) {
       setState(() => _barcodeRead = true);
-      Navigator.pop(context, code);
+      Navigator.pop(context, rslt.content);
     }
   }
 

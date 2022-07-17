@@ -94,9 +94,9 @@ packages:
     dependency: "direct dev"
     description:
       path: "."
-      ref: patched
-      resolved-ref: "14d5e88a406cc4abbe9244a1103bc78f478b779c"
-      url: "git://github.com/Towa-Japan/flutter_qr_bar_scanner.git"
+      ref: "feature/scan-result"
+      resolved-ref: "4b6de0849d941f20b9fe9e9f82e6d1c3cdc3a571"
+      url: "https://github.com/Towa-Japan/flutter_qr_bar_scanner.git"
     source: git
     version: "3.0.2"
   flutter_test:

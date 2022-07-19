@@ -95,7 +95,7 @@ packages:
     description:
       path: "."
       ref: "feature/scan-result"
-      resolved-ref: "151d8ac3e50775ab005e08b413a859ba6c2a3245"
+      resolved-ref: "8ad7a0748d0bb7b83e85f0a8a12f7c7e344c0ed7"
       url: "https://github.com/Towa-Japan/flutter_qr_bar_scanner.git"
     source: git
     version: "3.0.2"

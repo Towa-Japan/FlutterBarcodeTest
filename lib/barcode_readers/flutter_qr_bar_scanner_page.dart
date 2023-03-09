@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_qr_bar_scanner/flutter_qr_bar_scanner.dart';
@@ -28,7 +30,10 @@ class _FlutterQrBarScannerPageState extends State<FlutterQrBarScannerPage> {
       final barcode = rslt.firstWhereOrNull(_isAccepted);
       if (barcode != null) {
         _barcodeRead = true;
-        Navigator.pop(context, barcode.content);
+        Navigator.pop(
+            context,
+            barcode.content ??
+                utf8.decode(barcode.bytes, allowMalformed: true));
       }
       setState(() => _scanResult = rslt);
     }
